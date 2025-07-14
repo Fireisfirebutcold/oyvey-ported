@@ -14,8 +14,7 @@ public class FastPlace extends Module {
         super("FastPlace", "Makes you throw exp faster", Category.PLAYER, true, false, false);
     }
         
-@Override
-        ClientTickEvents.END_CLIENT_TICK.register(client -> {
+  @Override ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (toggleFlightKey.wasPressed()) {
                 flightEnabled = !flightEnabled;
 
