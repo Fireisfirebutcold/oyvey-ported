@@ -9,12 +9,12 @@ import net.minecraft.text.Text;
 import net.minecraft.world.GameMode;
 import org.lwjgl.glfw.GLFW;
 
-
-
-
-
-
-
+public class FastPlace extends Module {
+    public FastPlace() {
+        super("FastPlace", "Makes you throw exp faster", Category.PLAYER, true, false, false);
+    }
+        
+@Override
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (toggleFlightKey.wasPressed()) {
                 flightEnabled = !flightEnabled;
